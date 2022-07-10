@@ -10,4 +10,8 @@ class Whois extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    protected $casts = [
+        'nameservers' => 'array',
+    ];
 }

@@ -21,16 +21,6 @@ return new class extends Migration
             $table->dateTime('expires_at')->index();
             $table->dateTime('last_updated_at')->nullable();
             $table->string('status')->nullable();
-            $table->string('registrant_name')->nullable();
-            $table->string('registrant_organization')->nullable();
-            $table->string('registrant_street')->nullable();
-            $table->string('registrant_city')->nullable();
-            $table->string('registrant_state')->nullable();
-            $table->string('registrant_postal_code')->nullable();
-            $table->string('registrant_country')->nullable();
-            $table->string('registrant_phone')->nullable();
-            $table->string('registrant_fax')->nullable();
-            $table->string('registrant_email')->nullable();
             $table->timestamps();
 
             $table->index(['domain', 'created_at']);
