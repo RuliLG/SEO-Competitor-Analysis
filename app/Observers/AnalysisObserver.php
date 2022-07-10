@@ -2,7 +2,7 @@
 
 namespace App\Observers;
 
-use App\Jobs\FetchWhois;
+use App\Jobs\FetchCompetitors;
 use App\Models\Analysis;
 
 class AnalysisObserver
@@ -15,6 +15,7 @@ class AnalysisObserver
      */
     public function created(Analysis $analysis)
     {
-        dispatch(new FetchWhois($analysis));
+        dispatch(new FetchCompetitors($analysis));
+        // dispatch(new FetchWhois($analysis));
     }
 }

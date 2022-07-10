@@ -20,6 +20,7 @@ class Analysis extends Model
         'location',
         'language',
         'whois_id',
+        'competitors',
     ];
 
     protected $casts = [
